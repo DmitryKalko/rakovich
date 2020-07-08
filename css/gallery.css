@@ -1,0 +1,234 @@
+/* 
+
+.row-right{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	transform: rotate(-135deg); 
+    border-left: solid red 2px;
+    border-bottom: solid red 2px;
+	margin-left: 110px;
+	display: none;
+}
+.row-left{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	transform: rotate(45deg); 
+    border-left: solid red 2px;
+    border-bottom: solid red 2px;
+	margin-left: 100px;
+	display: none;
+}
+
+.cross{
+	width: 40px;
+	height: 40px;
+}
+.diagonal-1 {
+    height: 2px;
+	transform: rotate(135deg);
+	background-color: white;
+	margin-top: 8px;
+}
+.diagonal-2 {
+	height: 2px;
+	transform: rotate(-135deg);
+	background-color: white;
+	margin-top: -2px;
+} */
+
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 100px;
+}
+/* .container{
+	max-width: 1170px;
+	margin: auto;
+}
+.portfolio{
+	background-color: #ffffff;
+	padding: 60px 15px;
+} */
+.portfolio .section-title{
+	margin-bottom: 60px;
+	flex-basis: 100%;
+	max-width: 100%;
+}
+.portfolio .section-title h1{
+	margin: 0;
+	font-size: 36px;
+	text-align: center;
+	color: #000000;
+	font-weight: 700;
+}
+.portfolio .portfolio-item{
+	flex-basis: 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.portfolio .portfolio-item .item{
+	flex-basis: calc(33.33% - 30px);
+	max-width: calc(33.33% - 30px);
+	margin-bottom: 30px;
+	position: relative;
+	cursor: pointer;
+}
+.portfolio .portfolio-item .item img{
+    width: 100%;
+    display: block;
+}
+.portfolio .portfolio-item .item .overlay{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+.portfolio .portfolio-item .item:hover .overlay{
+	opacity: 1;
+}
+.portfolio .portfolio-item .item .overlay h2{
+	 font-size: 24px;
+	 color: #ffffff;
+	 margin: 30 px 0;
+	 font-weight: 600;
+}
+
+
+/* lightbox */
+
+.lightbox{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	/* cursor: zoom-out; */
+	padding: 0 15px;
+}
+
+.lightbox.open{
+	display: flex;
+}
+.lightbox .lightbox-img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	padding: 20px 0 40px 0;
+	cursor: pointer;
+	animation: lightbImage 0.5s ease;	
+}
+@keyframes lightbImage{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.lightbox .lightbox-content{
+	position: relative;
+}
+.lightbox .lightbox-close{
+	position: absolute;
+	z-index: 101;
+	right: 0;
+	height: 20px;
+	width: 20px;
+	top: 0;
+	/* text-align: center; */
+	line-height: 40px;
+	color: #ffffff;
+	cursor: default;
+	/* font-size: 35px; */
+}
+.diagonal-1 {
+    height: 2px;
+	transform: rotate(135deg);
+	background-color: white;
+	margin-top: 8px;
+}
+.diagonal-2 {
+	height: 2px;
+	transform: rotate(-135deg);
+	background-color: white;
+	margin-top: -2px;
+} 
+.lightbox .lightbox-caption{
+	color: #ffffff;
+	font-size: 18px;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 15px;
+	display: flex;
+	justify-content: space-between;
+	z-index: -1;
+}
+.lightbox .lightbox-controls div{
+	position: absolute;
+	top: 50%;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 35px;
+	font-weight: 400;
+	margin-top: -20px;
+	/* background-color: #ffffff;
+	border-radius: 50%;
+	background-color: #ccc; */
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.next{
+	transform: rotate(-135deg); 
+    border-left: solid white 2px;
+    border-bottom: solid white 2px;
+}
+.prev{
+	transform: rotate(45deg); 
+    border-left: solid white 2px;
+    border-bottom: solid white 2px;
+}
+/* .lightbox .lightbox-controls div:hover{
+	background-color: #ffffff;
+} */
+.lightbox .lightbox-controls div.prev{
+	left: 100px;
+}
+.lightbox .lightbox-controls div.next{
+	right: 100px;
+}
+
+@media(max-width:991px){
+	.portfolio .portfolio-item .item{
+		flex-basis: calc(50% - 30px);
+		max-width: calc(50% - 30px);
+    }
+}
+@media(max-width:575px){
+	.portfolio .portfolio-item .item{
+		flex-basis: calc(100%);
+		max-width: calc(100%);
+    }
+}

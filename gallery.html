@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/gallery.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.sidebar.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<title>Vitaly Rakovich</title>
+</head>
+
+<body data-id-page="gallery">
+
+	<!-- ---------------- боковое меню ------------------ -->
+
+	<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+	<label for="openSidebarMenu" class="sidebarIconToggle">
+	  <div class="spinner diagonal part-1"></div>
+	  <div class="spinner horizontal"></div>
+	  <div class="spinner diagonal part-2"></div>
+	</label>
+	<div class="sidebarMenu">
+	  <ul class="sidebarMenuInner">
+		<li>Виталий Ракович </li>
+			<span class="phone">+375 (29) 654-01-24</span> 
+			<span class="email">vitaly.rakovich@gmail.com</span>
+		
+		<li><a href="gallery.html" data-id-nav="gallery">ГАЛЕРЕЯ</a></li>
+		<li><a href="autor.html" data-id-nav="autor">АВТОР</a></li>
+	  </ul>
+			
+			<ul class="social">
+				<li><a href="https://ru-ru.facebook.com/Vitaly.Rakovich" target="blank"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="https://instagram.com/rakovich.v/" target="blank"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="https://behance.net/rakovich" target="blank"><i class="fab fa-behance"></i></a></li>
+			</ul>
+
+	</div>
+
+
+
+<div class="wrapper">
+	
+		<!-- ---------------- движуйщийся туман ---------------- -->
+		<div class="fog">
+			<div class="fog__container">
+				<div class="fog__img fog__img--first"></div>
+				<div class="fog__img fog__img--second"></div>
+			</div>
+		</div>
+
+		<div class="page">
+			<div class="parallax">
+				<div class="parallax_mountain parallax_mountain_1"></div>
+				<div class="parallax_mountain parallax_mountain_2"></div>
+				<div class="parallax_mountain parallax_mountain_3"></div>
+				<div class='top_title'>Rakovich</div>
+				<div class="parallax_fog"></div>
+
+				<!-- ---------------- значек скрола ---------------- -->
+				<div class="scroll-block">
+					<div class="scroll-ico"></div>
+				</div>
+			</div>
+				  <!-- --------------------------------------------------------------- -->
+				  
+			<div class="content">
+				<div class="content_body">
+					<!-- <div class="content_header">
+						<h1 class="content_title">Виталий Ракович</h1>
+						<h2 class="content_subtitle">фотохудожник</h2>
+					</div> -->
+					
+					<section class="portfolio">
+
+						<div class="container">
+							<!-- <div class="row">
+								<div class="section-title">
+									<h1>My Portfolio</h1>
+								</div>
+							</div> -->
+				
+							<div class="row">
+								<div class="portfolio-item">
+									<div class="item">
+										<img src="img/gallery/img-1.jpg" alt="portfolio">
+										<div class="overlay">
+											<h2>Wed Design</h2>
+										</div>
+									</div>
+									<div class="item">
+										<img src="img/gallery/img-2.jpg" alt="portfolio">
+										<div class="overlay">
+											<h2>Wed Design</h2>
+										</div>
+									</div>
+									<div class="item">
+										<img src="img/gallery/img-3.jpg" alt="portfolio">
+										<div class="overlay">
+											<h2>Wed Design</h2>
+										</div>
+									</div>
+									<div class="item">
+										<img src="img/gallery/img-4.jpg" alt="portfolio">
+										<div class="overlay">
+											<h2>Wed Design</h2>
+										</div>
+									</div>
+									<div class="item">
+										<img src="img/gallery/img-5.jpg" alt="portfolio">
+										<div class="overlay">
+											<h2>Wed Design</h2>
+										</div>
+									</div>
+									<div class="item">
+										<img src="img/gallery/img-6.jpg" alt="portfolio">
+										<div class="overlay">
+											<h2>Wed Design</h2>
+										</div>
+									</div>
+				
+								</div>
+				
+							</div>
+						</div>
+				
+					</section>
+				
+					<!-- Start lightbox -->
+					<div class="lightbox">
+						<div class="lightbox-content">
+							<div class="lightbox-close">
+								<div class="diagonal-1"></div>
+								<div class="diagonal-2"></div>
+							</div>
+							<img src="" class="lightbox-img" alt="img" onclick="next()">
+							<div class="lightbox-caption">
+								<span class="lightbox-text"></span>
+								<span class="lightbox-counter"></span>
+							</div>
+						</div>
+						<div class="lightbox-controls">
+							<div class="prev" onclick="prev()"> </div>
+							<div class="next" onclick="next()"> </div>
+				
+						</div>
+				
+					</div>
+					<!-- End lightbox -->
+					
+						</div>
+					
+					</div>
+
+				</div>
+			</div>
+
+	<script src="js/parallax.js"></script>
+	<script src="js/forItemsSidebar.js"></script>
+	<script src="js/gallery.js"></script>
+	
+</body>
+
+</html>
